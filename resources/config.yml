@@ -1,0 +1,24 @@
+enable-death-message: true
+drop-inventory: true
+clear-inventory: true
+clear-effects: true
+reset-saturation: true
+reset-hunger: true
+default: "%p died"
+void: "%p fell into the void"
+fall: "%p fell from a high place"
+fire: "%p burned to death"
+lava: "%p tried to swim in lava"
+suffocation: "%p suffocated"
+starvation: "%p starved to death"
+wither: "%p withered away"
+lightning: "%p was struck by lightning"
+projectile: "%p was shot"
+entity-explosion: "%p blew up"
+block-explosion: "%p blew up"
+magic: "%p was killed by magic"
+drowning: "%p drowned"
+entity-attack: "%p was slain by %a"
+falling-block: "%p was squashed by a falling block"
+cramming: "%p was squished too much"
+fly-into-wall: "%p experienced kinetic energy"
