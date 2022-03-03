@@ -32,7 +32,13 @@ public final class DCP extends JavaPlugin implements Listener {
         clearEffects = this.getConfig().getBoolean("clear-effects");
         resetSaturation = this.getConfig().getBoolean("reset-saturation");
         resetHunger = this.getConfig().getBoolean("reset-hunger");
-        this.getConfig().getKeys(true).stream().filter(s -> !s.contains("reset") && !s.contains("clear") && !s.contains("drop") && !s.equals("enable-death-message") && !s.equals("default")).forEach(s -> deathMessages.put(EntityDamageEvent.DamageCause.valueOf(s.toUpperCase().replace("-", "_")), this.getConfig().getString(s)));
+        this.getConfig().getKeys(true).stream().filter(s -> !s.contains("reset") && !s.contains("clear") && !s.contains("drop") && !s.equals("enable-death-message") && !s.equals("default")).forEach(s -> {
+            final String name = s.toUpperCase().replace("-", "_");
+            if (Arrays.stream(EntityDamageEvent.DamageCause.values()).noneMatch(cause -> cause.name().equals(name)))
+                System.out.println("ignoring unsupported damage cause \"" + name + "\"");
+            else
+                deathMessages.put(EntityDamageEvent.DamageCause.valueOf(name), this.getConfig().getString(s));
+        });
     }
 
     @Override
