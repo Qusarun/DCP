@@ -1,0 +1,5 @@
+name: DCP
+author: Qusarun
+version: 1.0
+description: A plugin for configuring Minecraft death behaviour. (+ small API)
+main: ru.qusarun.dcp.DCP
