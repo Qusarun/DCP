@@ -1,4 +1,4 @@
-package ru.qusarun.dcp;
+package com.qusarun.dcp;
 
 import lombok.Getter;
 import org.bukkit.Bukkit;
